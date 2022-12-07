@@ -2,10 +2,18 @@ class Game {
     name:string
     genre:string
     cost?:number
-    constructor(name:string,genre:string,cost?:number){
+    rewiews?:string[]
+    constructor(name:string,genre:string,cost?:number,rewiews?:string[]){
         this.name = name
         this.genre = genre
         this.cost = cost
+        if (rewiews){
+            this.rewiews = rewiews
+        }
+        else{
+            this.rewiews = Array()
+        }
+
     }
 }
 // function findGame (value:number,gen:string,msearch=true):Game|Game[]{
@@ -30,9 +38,10 @@ class Game {
 // // console.log(typeof(null))
 
 
-let game = new Game ("Fallout","Shooter",1500);
+const rewiews:string[] = ["Lorem","Loremm","Loremmm"]
+let game = new Game ("Fallout","Shooter",1500, rewiews);
 // game.cost = undefined;
-// console.log(game)
+console.log(game)
 // if (game.cost == null){
 //     console.log("This game couldn't be bought");
     
@@ -51,8 +60,5 @@ function test(value:unknown){
         return `${value.name} ${value.genre} ${value.cost}`
     }
 }
-console.log(test(game))
-console.log(test(null))
-console.log(test(undefined))
-console.log(test(11))
-console.log(test(true))
+// const rewiews:string[] = []
+// const rewiews:[string,number,string][] = [["Andrew",5,"Lorem"]]
