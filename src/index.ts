@@ -8,26 +8,26 @@ class Game {
         this.cost = cost
     }
 }
-function findGame (value:number,gen:string,msearch=true):Game|Game[]{
-    const algsearch = (game)=>{
-        return game.genre == gen && value >= game.cost;
-    }
-    if (msearch){
-        return games.filter(algsearch)
-    }
-    else if (msearch==false){
-        return games.find(algsearch)
-    }
-}
-const games = [
-    new Game ("Genshin", "MMO",0),
-    new Game ("Far cry", "Shooter",2000),
-    new Game ("Watch dogs", "Action",2000),
-    new Game ("GTA","Action",1100)
-]
-// console.log(findGame(2000,"Action"))
-// console.log(findGame("2000","Action"))
-// console.log(typeof(null))
+// function findGame (value:number,gen:string,msearch=true):Game|Game[]{
+//     const algsearch = (game)=>{
+//         return game.genre == gen && value >= game.cost;
+//     }
+//     if (msearch){
+//         return games.filter(algsearch)
+//     }
+//     else if (msearch==false){
+//         return games.find(algsearch)
+//     }
+// }
+// const games = [
+//     new Game ("Genshin", "MMO",0),
+//     new Game ("Far cry", "Shooter",2000),
+//     new Game ("Watch dogs", "Action",2000),
+//     new Game ("GTA","Action",1100)
+// ]
+// // console.log(findGame(2000,"Action"))
+// // console.log(findGame("2000","Action"))
+// // console.log(typeof(null))
 
 
 let game = new Game ("Fallout","Shooter",1500);
